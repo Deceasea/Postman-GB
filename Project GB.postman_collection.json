@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "f66b5d32-dc03-4228-81c3-93f5455c0fea",
+		"name": "Project GB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25202935"
+	},
+	"item": [
+		{
+			"name": "My publications",
+			"item": [
+				{
+					"name": "My Publications ASC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"AuthorId\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"5948\");",
+									"});",
+									"pm.test(\"Check page limit\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(7)",
+									"});",
+									"pm.test(\"Check if Gremlin 1 has id 15754 \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 15754",
+									"        });",
+									"    pm.expect(result.title).to.eql(\"Gremlin 1\")",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"My first test\");",
+									"});",
+									"pm.test(\"Check if id 0 has no object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 0",
+									"        });",
+									"    pm.expect(result).to.undefined",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Status code name has OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Content-Type is in header\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-auth-token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAt&order=ASC&page=1",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAt"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Publications DESC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"AuthorId\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"5948\");",
+									"});",
+									"pm.test(\"Check page limit\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(7)",
+									"});",
+									"pm.test(\"Check if Gremlin 6 has id 15759 \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 15759",
+									"        });",
+									"    pm.expect(result.title).to.eql(\"Gremlin 6\")",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"My sixth test\");",
+									"});",
+									"pm.test(\"Check if id 0 has no object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 0",
+									"        });",
+									"    pm.expect(result).to.undefined",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Status code name has OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Content-Type is in header\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=DESC&page=1",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAT"
+								},
+								{
+									"key": "order",
+									"value": "DESC"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Not my publications",
+			"item": [
+				{
+					"name": "NM Publications ASC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Check page limit\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(9166)",
+									"});",
+									"pm.test(\"Check if жареные сосиски has id 1 \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 1",
+									"        });",
+									"    pm.expect(result.title).to.eql(\"жареные сосиски\")",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"dfghjkljhvcxvbnm,nbcghkjlkljhgvc\");",
+									"});",
+									"pm.test(\"Check if id 0 has no object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 0",
+									"        });",
+									"    pm.expect(result).to.undefined",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Status code name has OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Content-Type is in header\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ASC&page=1&owner=notMe",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAT"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "owner",
+									"value": "notMe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NM Publications ALL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ALL&page=1&owner=notMe",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAT"
+								},
+								{
+									"key": "order",
+									"value": "ALL"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "owner",
+									"value": "notMe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NM Publications page 345",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Check page limit\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(9166)",
+									"});",
+									"pm.test(\"Check if Девушка с олененком has id 3987 \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 3987",
+									"        });",
+									"    pm.expect(result.title).to.eql(\"Девушка с олененком\")",
+									"});",
+									"pm.test(\"Check if id 0 has no object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 0",
+									"        });",
+									"    pm.expect(result).to.undefined",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Status code name has OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Content-Type is in header\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ASC&page=345&owner=notMe",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAT"
+								},
+								{
+									"key": "order",
+									"value": "ASC"
+								},
+								{
+									"key": "page",
+									"value": "345"
+								},
+								{
+									"key": "owner",
+									"value": "notMe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NM Publications DESC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Check page limit\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.meta.count).to.eql(9166)",
+									"});",
+									"pm.test(\"Check if Торт Наполеон 6 has id 16176 \", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 16176",
+									"        });",
+									"    pm.expect(result.title).to.eql(\"Торт Наполеон 6\")",
+									"});",
+									"pm.test(\"Check if id 0 has no object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var result = jsonData.data.find(obj => {",
+									"            return obj.id === 0",
+									"        });",
+									"    pm.expect(result).to.undefined",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Status code name has OK\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"pm.test(\"Content-Type is in header\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=DESC&page=1&owner=notMe",
+							"protocol": "https",
+							"host": [
+								"test-stand",
+								"gb",
+								"ru"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "createdAT"
+								},
+								{
+									"key": "order",
+									"value": "DESC"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "owner",
+									"value": "notMe"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.collectionVariables.set(\"token\", jsonData.token);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\": \"Veresk\",\n\"password\": \"c4b213d341\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test-stand.gb.ru/api/login",
+					"protocol": "https",
+					"host": [
+						"test-stand",
+						"gb",
+						"ru"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

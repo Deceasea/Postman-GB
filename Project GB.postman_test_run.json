@@ -1,0 +1,455 @@
+{
+	"id": "9e7fe1b1-d0f7-4a63-a2ed-c223369963fa",
+	"name": "Project GB",
+	"timestamp": "2023-04-06T18:24:23.069Z",
+	"collection_id": "25202935-f66b5d32-dc03-4228-81c3-93f5455c0fea",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 42,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-04-06T18:24:19.887Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "34df9874-6259-46e9-843c-2fb7addd8dad",
+			"name": "My Publications ASC",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAt&order=ASC&page=1",
+			"time": 412,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"AuthorId": true,
+				"Check page limit": true,
+				"Check if Gremlin 1 has id 15754 ": true,
+				"Body matches string": true,
+				"Check if id 0 has no object": true,
+				"Response time is less than 500ms": true,
+				"Status code name has OK": true,
+				"Content-Type is in header": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"AuthorId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check page limit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if Gremlin 1 has id 15754 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if id 0 has no object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				412
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"AuthorId": true,
+					"Check page limit": true,
+					"Check if Gremlin 1 has id 15754 ": true,
+					"Body matches string": true,
+					"Check if id 0 has no object": true,
+					"Response time is less than 500ms": true,
+					"Status code name has OK": true,
+					"Content-Type is in header": true
+				}
+			]
+		},
+		{
+			"id": "46dac720-3d52-47fa-82e4-2b5d318dca2e",
+			"name": "My Publications DESC",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=DESC&page=1",
+			"time": 313,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"AuthorId": true,
+				"Check page limit": true,
+				"Check if Gremlin 6 has id 15759 ": true,
+				"Body matches string": true,
+				"Check if id 0 has no object": true,
+				"Response time is less than 500ms": true,
+				"Status code name has OK": true,
+				"Content-Type is in header": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"AuthorId": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check page limit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if Gremlin 6 has id 15759 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if id 0 has no object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				313
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"AuthorId": true,
+					"Check page limit": true,
+					"Check if Gremlin 6 has id 15759 ": true,
+					"Body matches string": true,
+					"Check if id 0 has no object": true,
+					"Response time is less than 500ms": true,
+					"Status code name has OK": true,
+					"Content-Type is in header": true
+				}
+			]
+		},
+		{
+			"id": "39d44d85-749c-4a2c-ac36-d37ae320b00b",
+			"name": "NM Publications ASC",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ASC&page=1&owner=notMe",
+			"time": 273,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check page limit": true,
+				"Check if жареные сосиски has id 1 ": true,
+				"Body matches string": true,
+				"Check if id 0 has no object": true,
+				"Response time is less than 500ms": true,
+				"Status code name has OK": true,
+				"Content-Type is in header": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check page limit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if жареные сосиски has id 1 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if id 0 has no object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check page limit": true,
+					"Check if жареные сосиски has id 1 ": true,
+					"Body matches string": true,
+					"Check if id 0 has no object": true,
+					"Response time is less than 500ms": true,
+					"Status code name has OK": true,
+					"Content-Type is in header": true
+				}
+			]
+		},
+		{
+			"id": "5d5cef26-91c7-4493-add1-d83ec3f21cac",
+			"name": "NM Publications ALL",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ALL&page=1&owner=notMe",
+			"time": 234,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "f16dbcb4-2b5a-49cd-9f67-ec5dc4a4e43a",
+			"name": "NM Publications page 345",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=ASC&page=345&owner=notMe",
+			"time": 273,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check page limit": true,
+				"Check if Девушка с олененком has id 3987 ": true,
+				"Check if id 0 has no object": true,
+				"Response time is less than 500ms": true,
+				"Status code name has OK": true,
+				"Content-Type is in header": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check page limit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if Девушка с олененком has id 3987 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if id 0 has no object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check page limit": true,
+					"Check if Девушка с олененком has id 3987 ": true,
+					"Check if id 0 has no object": true,
+					"Response time is less than 500ms": true,
+					"Status code name has OK": true,
+					"Content-Type is in header": true
+				}
+			]
+		},
+		{
+			"id": "df31e4e2-40d1-4489-8072-c912f131545d",
+			"name": "NM Publications DESC",
+			"url": "https://test-stand.gb.ru/api/posts?sort=createdAT&order=DESC&page=1&owner=notMe",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Check page limit": true,
+				"Check if Торт Наполеон 6 has id 16176 ": true,
+				"Check if id 0 has no object": true,
+				"Response time is less than 500ms": true,
+				"Status code name has OK": true,
+				"Content-Type is in header": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check page limit": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if Торт Наполеон 6 has id 16176 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if id 0 has no object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is in header": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Check page limit": true,
+					"Check if Торт Наполеон 6 has id 16176 ": true,
+					"Check if id 0 has no object": true,
+					"Response time is less than 500ms": true,
+					"Status code name has OK": true,
+					"Content-Type is in header": true
+				}
+			]
+		},
+		{
+			"id": "d07f0a28-6cdc-4a50-b377-5d2eabc88e1d",
+			"name": "Create Token",
+			"url": "https://test-stand.gb.ru/api/login",
+			"time": 791,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				791
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2556,
+	"collection": {
+		"requests": [
+			{
+				"id": "34df9874-6259-46e9-843c-2fb7addd8dad",
+				"method": "GET"
+			},
+			{
+				"id": "46dac720-3d52-47fa-82e4-2b5d318dca2e",
+				"method": "GET"
+			},
+			{
+				"id": "39d44d85-749c-4a2c-ac36-d37ae320b00b",
+				"method": "GET"
+			},
+			{
+				"id": "5d5cef26-91c7-4493-add1-d83ec3f21cac",
+				"method": "GET"
+			},
+			{
+				"id": "f16dbcb4-2b5a-49cd-9f67-ec5dc4a4e43a",
+				"method": "GET"
+			},
+			{
+				"id": "df31e4e2-40d1-4489-8072-c912f131545d",
+				"method": "GET"
+			},
+			{
+				"id": "d07f0a28-6cdc-4a50-b377-5d2eabc88e1d",
+				"method": "POST"
+			}
+		]
+	}
+}
